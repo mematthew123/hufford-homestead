@@ -23,9 +23,9 @@ export default {
       type: 'number',
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
     },
     {
       name: 'image',

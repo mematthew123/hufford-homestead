@@ -4,7 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 
 export const Chickens = ({ chicken }) => {
-  const { title, description, image } = chicken;
+  const { name, body, image,price,breed } = chicken;
 
   const [imageUrl, setImageUrl] = useState("");
 
@@ -21,13 +21,14 @@ export const Chickens = ({ chicken }) => {
     <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center">
       <h1 className="font-extrabold text-gray-900" />
       <div className=" justify-center grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-        <h1 className=" font-bold text-2xl text-blue-700 underline ">
-          {title}
-        </h1>
-        <p className="text-lg text-gray-500">{description}</p>
+      <div className="flex flex-col justify-center container mx-auto">
+        <h1 className=" font-bold text-2xl text-blue-700 underline ">{name}</h1>
+        <p className="text-lg text-gray-500">Breed:{breed}</p>
+        <BlockContent blocks={body} />
+        <p className="text-lg text-gray-500">${price}</p>
+        </div>
         {imageUrl && <img className={image} src={imageUrl} />}
 
-        {/* <BlockContent blocks={description} /> */}
       </div>
     </div>
   );

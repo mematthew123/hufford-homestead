@@ -46,6 +46,8 @@ export default function Goats({ goats }) {
                   {g.name}
                 </h3>
                 <img src={g.image} alt={g.name} />
+                <p className="text-lg text-gray-500">Read More</p>
+
               </div>
             ))
           ) : (

@@ -46,6 +46,8 @@ export default function Chickens({ chickens }) {
                   {c.name}
                 </h3>
                 <img src={c.image} alt={c.name} />
+                <p className="text-lg text-gray-500">Read More</p>
+
               </div>
             ))
           ) : (

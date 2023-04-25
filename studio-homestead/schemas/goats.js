@@ -18,21 +18,27 @@ export default {
         maxLength: 96,
       },
     },
-
-    {
-      name: "age",
-      title: "Age",
-      type: "number",
-    },
     {
       name: "breed",
       title: "Breed",
       type: "string",
     },
+
     {
-      name: "description",
-      title: "Description",
-      type: "text",
+      name: "born",
+      title: "DOB",
+      type: "date",
+    },
+
+    {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    },
+    {
+      name: "price",
+      title: "Price",
+      type: "number",
     },
     {
       name: "image",
@@ -42,10 +48,6 @@ export default {
         hotspot: true,
       },
     },
-    {
-      name: "price",
-      title: "Price",
-      type: "number",
-    },
+
   ],
 };

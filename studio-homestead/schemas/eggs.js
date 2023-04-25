@@ -1,6 +1,6 @@
 export default {
   name: 'egg',
-  title: 'Egg',
+  title: 'Eggs',
   type: 'document',
   fields: [
     {

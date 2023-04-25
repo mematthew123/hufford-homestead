@@ -1,4 +1,4 @@
-import eggs from "@/studio-homestead/schemas/eggs";
+
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
@@ -27,7 +27,7 @@ export const Chickens = ({ chicken }) => {
         <p className="text-lg text-gray-500">{description}</p>
         {imageUrl && <img className={image} src={imageUrl} />}
 
-        <BlockContent blocks={description} />
+        {/* <BlockContent blocks={description} /> */}
       </div>
     </div>
   );
@@ -56,7 +56,7 @@ export const getServerSideProps = async (context) => {
       ...chicken,
       image: {
         ...chicken.image,
-        url: imgBuilder.image(eggs.image).width(800).height(650).url(),
+        url: imgBuilder.image(chicken.image).width(800).height(650).url(),
       },
     };
 

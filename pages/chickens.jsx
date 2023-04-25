@@ -2,29 +2,29 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function Chickens ({ chicken }) {
+export default function Chickens({ chickens }) {
   const router = useRouter();
   const [mappedChickens, setMappedChickens] = useState([]);
 
   useEffect(() => {
-    if (chicken.length) {
+    if (chickens.length) {
       const imgBuilder = imageUrlBuilder({
         projectId: "er2tzasn",
         dataset: "production",
       });
 
       setMappedChickens(
-        chicken.map((g) => {
+        chickens.map((c) => {
           return {
-            ...g,
-            image: imgBuilder.image(g.image).width(800).height(650),
+            ...c,
+            image: imgBuilder.image(c.image).width(800).height(650),
           };
         })
       );
     } else {
       setMappedChickens([]);
     }
-  }, [chicken]);
+  }, [chickens]);
 
   return (
     <div className="flex flex-col md:flex-row col-auto justify-between ">
@@ -36,20 +36,20 @@ export default function Chickens ({ chicken }) {
 
         <div className=" justify-center grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {mappedChickens.length ? (
-            mappedChickens.map((g, index) => (
+            mappedChickens.map((c, index) => (
               <div
-                onClick={() => router.push(`/chickens/${g.slug.current}`)}
+                onClick={() => router.push(`/chickens/${c.slug.current}`)}
                 key={index}
                 className=" inline-grid justify-center rounded-lg shadow-lg bg-white p-8 hover:cursor-pointer "
               >
                 <h3 className=" inline-grid font-bold text-xl text-slate-800 ">
-                  {g.name}
+                  {c.name}
                 </h3>
-                <img src={g.image} alt={g.name} />
+                <img src={c.image} alt={c.name} />
               </div>
             ))
           ) : (
-            <>Chickens Sold Out!</>
+            <>No Chickens Yet</>
           )}
         </div>
       </div>
@@ -65,13 +65,13 @@ export const getServerSideProps = async (pageContext) => {
   if (!result.result || !result.result.length) {
     return {
       props: {
-        chicken: [],
+        chickens: [],
       },
     };
   } else {
     return {
       props: {
-        chicken: result.result,
+        chickens: result.result,
       },
     };
   }

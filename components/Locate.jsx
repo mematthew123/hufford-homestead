@@ -32,7 +32,7 @@ export function Locate() {
                   height: "800px",
                 },
               }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="Google Map"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ContactModal = ({ modalOpen, toggleModal }) => {
   if (!modalOpen) {
@@ -15,8 +15,7 @@ const ContactModal = ({ modalOpen, toggleModal }) => {
         <div className="inline-block bg-white rounded-lg p-6 text-left overflow-hidden shadow-xl transform transition-all">
           <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
           <p>
-            To get in touch with us, you can either call or send us an
-            email.
+            To get in touch with us, you can either call or send us an email.
           </p>
           <div className="flex flex-col mt-4">
             <a
@@ -26,7 +25,7 @@ const ContactModal = ({ modalOpen, toggleModal }) => {
               Call: +1 (234) 567-890
             </a>
             <a
-              href="mailto:info@example.com"
+              href="mailto:huffordhomestead@gmail.com"
               className="bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-800"
             >
               Email: huffordhomestead@gmail.com

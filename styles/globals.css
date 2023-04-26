@@ -1,5 +1,28 @@
+/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{}
+:root{
+    background: #fefae0ff;
+}
+
+.bg-tea-green {
+  @apply bg-[#ccd5aeff];
+}
+
+.bg-beige {
+  @apply bg-[#e9edc9ff];
+}
+
+.bg-cornsilk {
+  @apply bg-[#fefae0ff];
+}
+
+.bg-papaya-whip {
+  @apply bg-[#faedcdff];
+}
+
+.bg-buff {
+  @apply bg-[#d4a373ff];
+}

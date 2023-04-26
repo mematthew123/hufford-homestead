@@ -6,6 +6,8 @@ import EggImage from '../public/eggs.jpg';
 import Link from 'next/link';
 
 import Image from 'next/image';
+import { Locate } from '@/components/Locate';
+import ContactModal from '@/components/ContactModal';
 const Home = () => {
   return (
     <>
@@ -21,8 +23,8 @@ const Home = () => {
         </div>
       </section>
       <section className="py-16 ">
-        <h2 className="text-center text-4xl font-bold text-cornsilk mb-10">Our Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <h2 className="text-center text-4xl font-bold text-cornsilk mb-10">Our Homestead</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
             <div className="bg-white rounded-lg p-6">
               <Link href="/goats">
               <Image src={GoatImage} alt="Goats" className="w-full h-56 object-cover rounded-lg mb-4" />
@@ -46,10 +48,11 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-tea-green py-16">
+        <section className="bg-tea-green py-2">
           <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-ash-gray mb-4">Contact Us</h2>
-            <p className="text-2xl text-ash-gray mb-4">We'd love to hear from you!</p>
+            <h2 className="text-2xl font-bold text-ash-gray mb-4">Contact Us</h2>
+            <p className="text-xl text-ash-gray mb-1">We'd love to hear from you!</p>
+            <Locate/>
             </div>
         </section>
       </div>

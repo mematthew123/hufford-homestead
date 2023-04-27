@@ -20,6 +20,12 @@ const Home = () => {
       <Head>
         <title>Hufford Homestead</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="Hufford Homestead" />
+        {/* <meta property="og:title" content="Hufford Homestead" />
+        <meta property="og:description" content="Hufford Homestead" />
+        <meta property="og:url" content="https://huffordhomestead.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/logo.png" /> */}
       </Head>
       <div className="min-h-screen ">
         <section className="bg-cover bg-center py-20">

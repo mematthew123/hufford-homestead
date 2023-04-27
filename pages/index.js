@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import ChickenImage from "../public/chickenHeld.jpg";
-import GoatImage from "/Users/matthewrhoads/Developer/hufford-homestead/public/whiteGoate.jpg";
+import GoatImage from "../public/whiteGoate.jpg";
 import EggImage from "../public/eggs.jpg";
 import Link from "next/link";
 import { useState } from "react";

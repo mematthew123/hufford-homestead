@@ -29,12 +29,15 @@ export default function Eggs({ egg }) {
   return (
     <div className="flex flex-col md:flex-row col-auto justify-between ">
       <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center justify-center ">
-        <h1 className="font-extrabold text-gray-900">
-          <p className="text-xl sm:text-3xl md:text-4xl">Hufford Homestead</p>
-        </h1>
-        <h3 className="text-xl sm:text-3xl md:text-4xl">Eggs!</h3>
+       <h2  className="font-fraunces text-3xl tracking-tight text-slate-800 sm:text-4xl mb-4"> Eggs</h2>
+        <p className="text-xl text-gray-500 container pb-8 font-barlow line-clamp-6 leading-tight">
+          {" "}
+          Taste the difference of farm-fresh eggs! Our
+          happy, healthy hens lay eggs with bright yolks and firm whites,
+          perfect for your morning breakfast or your favorite baking recipe.
+        </p>
 
-        <div className=" justify-center grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className=" pb-8 justify-center grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {mappedEggs.length ? (
             mappedEggs.map((g, index) => (
               <div

@@ -1,16 +1,13 @@
 import { Container } from "@/components/Container";
 
-
-
 export function Locate() {
   return (
     <section id="locate" aria-label="Locate" className="py-2 sm:py-12">
       <Container>
         <div className="md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-          </h2>
-          <p className="mt-4 text-lg text-slate-400">
-            401 W Moore st, Glens Ferry ID
+          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl"></h2>
+          <p className=" text-lg text-slate-400">
+            123 W Moore st, Glens Ferry ID
           </p>
         </div>
 

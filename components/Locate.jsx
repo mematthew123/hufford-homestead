@@ -19,13 +19,13 @@ export function Locate() {
                 width: "100%",
                 height: "300px",
                 border: "0",
-                "@media (min-width: 640px)": {
+                "@media (minWidth: 640px)": {
                   height: "400px",
                 },
-                "@media (min-width: 768px)": {
+                "@media (minWidth: 768px)": {
                   height: "600px",
                 },
-                "@media (min-width: 1024px)": {
+                "@media (minWidth: 1024px)": {
                   height: "800px",
                 },
               }}

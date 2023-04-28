@@ -1,11 +1,10 @@
-
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import ContactModal from "@/components/ContactModal";
 
 export const Chickens = ({ chicken }) => {
-  const { name, body, image,price,breed } = chicken;
+  const { name, body, image, price, breed } = chicken;
 
   const [imageUrl, setImageUrl] = useState("");
   const [modalOpen, setModalOpen] = useState(false);
@@ -13,7 +12,6 @@ export const Chickens = ({ chicken }) => {
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
-
 
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
@@ -26,42 +24,41 @@ export const Chickens = ({ chicken }) => {
 
   return (
     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
-
-    <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center">
-    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-center lg:space-x-12">
-      <div className="flex flex-col justify-center container mx-auto lg:w-1/2">
-        <h1 className="font-bold text-2xl text-blue-700 underline">{name}</h1>
-        {imageUrl && (
-          <img
-            className={`rounded-lg shadow-lg my-6 lg:my-0`}
-            src={imageUrl}
-            alt={name}
-          />
-        )}
-        <BlockContent blocks={body} />
-        <p className="text-lg text-gray-500">${price}</p>
-      </div>
-
-      <div className="flex flex-col container mx-auto lg:w-1/2">
-        <h2 className="font-bold text-xl text-blue-700">
-          Why Choose Our Chickens?
-        </h2>
-        <p className="text-lg text-gray-500">
-          Our Chickens are raised with love, care, and attention. We prioritize
-          their well-being and ensure they have the best possible environment
-          to grow and thrive.
-        </p>
-        <button
-          onClick={toggleModal}
-          className="bg-blue-700 text-white py-2 px-4 rounded mt-4 hover:bg-blue-800"
-        >
-          Contact Us
-        </button>
-        <ContactModal modalOpen={modalOpen} toggleModal={toggleModal} />
-
+      <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-center lg:space-x-12">
+          <div className="flex flex-col justify-center container mx-auto lg:w-1/2">
+            <h1 className=" py-2 font-bold text-2xl text-blue-700 underline">
+              {name}
+            </h1>
+            {imageUrl && (
+              <img
+                className={`rounded-lg shadow-lg my-6 lg:my-0`}
+                src={imageUrl}
+                alt={name}
+              />
+            )}
+            <BlockContent blocks={body} />
+            <p className=" py-4 text-lg text-gray-500">${price}</p>
+          </div>
+          <div className=" flex flex-col container mx-auto lg:w-1/2">
+            <h2 className=" hidden lg:block font-bold text-xl text-blue-700">
+              Why Choose Our Chickens?
+            </h2>
+            <p className=" hidden lg:block text-gray-500">
+              Our Chickens are raised with love, care, and attention. We prioritize
+              their well-being and ensure they have the best possible
+              environment to grow and thrive.
+            </p>
+            <button
+              onClick={toggleModal}
+              className="bg-blue-700 text-white py-2 px-4 rounded mt-4 hover:bg-blue-800"
+            >
+              Contact Us
+            </button>
+            <ContactModal modalOpen={modalOpen} toggleModal={toggleModal} />
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

@@ -51,7 +51,7 @@ export default function Goats({ goats }) {
             pet, our goats are sure to bring joy to your life.
           </p>
 
-          <div className=" justify-center grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          <div className=" pb-8 justify-center grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {mappedGoats.length ? (
               mappedGoats.map((g, index) => (
                 <div

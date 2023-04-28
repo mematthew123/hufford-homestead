@@ -1,69 +1,76 @@
-import goats from "@/studio-homestead/schemas/goats";
 
-const EXTERNAL_DATA_URL = "https://huffordhomestead.typicode.com/goats";
+import createClient from "/Users/matthewrhoads/Developer/hufford-homestead/sanityClient.js";
 
-function generateSiteMap(posts) {
-  return `<?xml version="1.0" encoding="UTF-8"?>
-   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!--We manually set the 5 URLs we know already-->
-     <url>
-       <loc>https://huffordhomestead.com.typicode.com</loc>
-     </url>
-     <url>
-       <loc>https://huffordhomestead.typicode.com/chickens</loc>
-     </url>
+const createSitemap = (data, baseUrl) => `
+  <?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    ${data.posts
+      .map(
+        ({ slug }) => `
       <url>
-        <loc>https://huffordhomestead.typicode.com/goats</loc>
+        <loc>${baseUrl}/posts/${slug}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
       </url>
+    `
+      )
+      .join("")}
+    ${data.eggs
+      .map(
+        ({ slug }) => `
       <url>
-        <loc>https://huffordhomestead.typicode.com/eggs</loc>
+        <loc>${baseUrl}/eggs/${slug}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
       </url>
+    `
+      )
+      .join("")}
+    ${data.chickens
+      .map(
+        ({ slug }) => `
       <url>
-        <loc>https://huffordhomestead.typicode.com/about</loc>
+        <loc>${baseUrl}/chickens/${slug}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
       </url>
+    `
+      )
+      .join("")}
+    ${data.goats
+      .map(
+        ({ slug }) => `
+      <url>
+        <loc>${baseUrl}/goats/${slug}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+      </url>
+    `
+      )
+      .join("")}
+  </urlset>
+`;
 
+const Sitemap = () => {};
 
+export const getStaticProps = async () => {
+  const baseUrl = "https://huffordhomestead.com"; 
+  const query = `
+    {
+      "eggs": *[_type == "egg"]{ "slug": slug.current },
+      "chickens": *[_type == "chicken"]{ "slug": slug.current },
+      "goats": *[_type == "goat"]{ "slug": slug.current }
+    }
+  `;
+  const data = await createClient.fetch(query);
+  const sitemap = createSitemap(data, baseUrl);
 
-
-      <!--We then map over the posts array to create URLs for each post-->
-
-
-     ${goats
-       .map(({ id }) => {
-         return `
-       <url>
-           <loc>${`${EXTERNAL_DATA_URL}/${id}`}</loc>
-       </url>
-     `;
-       })
-       .join("")}
-   </urlset>
- `;
-}
-
-
-
-
-function SiteMap() {
-  // getServerSideProps will do the heavy lifting
-}
-
-export async function getServerSideProps({ res }) {
-  // We make an API call to gather the URLs for our site
-  const request = await fetch(EXTERNAL_DATA_URL);
-  const posts = await request.json();
-
-  // We generate the XML sitemap with the posts data
-  const sitemap = generateSiteMap(posts);
-
-  res.setHeader("Content-Type", "text/xml");
-  // we send the XML to the browser
-  res.write(sitemap);
-  res.end();
+  fs.writeFileSync(path.join(process.cwd(), "public", "sitemap.xml"), sitemap);
 
   return {
     props: {},
+    revalidate: 86400, // Revalidate after 24 hours (86400 seconds)
   };
-}
+};
 
-export default SiteMap;
+export default Sitemap;

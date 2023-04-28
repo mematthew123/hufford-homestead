@@ -27,7 +27,7 @@ export const Chickens = ({ chicken }) => {
       <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-center lg:space-x-12">
           <div className="flex flex-col justify-center container mx-auto lg:w-1/2">
-            <h1 className=" py-2 font-bold text-2xl text-blue-700 underline">
+            <h1 className=" py-2 font-bold text-2xl text-slate-800 underline">
               {name}
             </h1>
             {imageUrl && (
@@ -41,7 +41,7 @@ export const Chickens = ({ chicken }) => {
             <p className=" py-4 text-lg text-gray-500">${price}</p>
           </div>
           <div className=" flex flex-col container mx-auto lg:w-1/2">
-            <h2 className=" hidden lg:block font-bold text-xl text-blue-700">
+            <h2 className=" hidden lg:block font-bold text-xl text-slate-800">
               Why Choose Our Chickens?
             </h2>
             <p className=" hidden lg:block text-gray-500">
@@ -51,7 +51,7 @@ export const Chickens = ({ chicken }) => {
             </p>
             <button
               onClick={toggleModal}
-              className="bg-blue-700 text-white py-2 px-4 rounded mt-4 hover:bg-blue-800"
+              className="bg-slate-800 text-white py-2 px-4 rounded mt-4 hover:bg-blue-800"
             >
               Contact Us
             </button>

@@ -35,14 +35,12 @@ export default function Goats({ goats }) {
         <meta name="description" content="Goats | Hufford Homestead" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className="flex flex-col md:flex-row col-auto justify-between ">
         <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center justify-center ">
           <h2 className="font-fraunces text-3xl tracking-tight text-slate-800 sm:text-4xl mb-4">
             {" "}
             Goats
           </h2>
-
           <p className="text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
             Our goats are raised on open pastures, with plenty of room to graze
             and play. We have a variety of breeds, including Nigerian Dwarf,
@@ -57,7 +55,7 @@ export default function Goats({ goats }) {
                 <div
                   onClick={() => router.push(`/goats/${g.slug.current}`)}
                   key={index}
-                  className=" inline-grid justify-center rounded-lg shadow-lg bg-white p-8 hover:cursor-pointer "
+                  className=" inline-grid justify-center rounded-lg shadow-lg bg-gray-50 p-8 hover:cursor-pointer "
                 >
                   <h3 className=" inline-grid font-bold text-xl text-slate-800 ">
                     {g.name}

@@ -35,42 +35,40 @@ export default function Eggs({ egg }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
+        <div className="flex flex-col md:flex-row col-auto justify-between ">
+          <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center justify-center ">
+            <h2 className="font-fraunces text-3xl tracking-tight text-slate-800 sm:text-4xl mb-4">
+              {" "}
+              Eggs
+            </h2>
+            <p className="text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
+              {" "}
+              Taste the difference of farm-fresh eggs! Our happy, healthy hens
+              lay eggs with bright yolks and firm whites, perfect for your
+              morning breakfast or your favorite baking recipe.
+            </p>
 
-      <div className="flex flex-col md:flex-row col-auto justify-between ">
-        <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center justify-center ">
-          <h2 className="font-fraunces text-3xl tracking-tight text-slate-800 sm:text-4xl mb-4">
-            {" "}
-            Eggs
-          </h2>
-          <p className="text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
-            {" "}
-            Taste the difference of farm-fresh eggs! Our happy, healthy hens lay
-            eggs with bright yolks and firm whites, perfect for your morning
-            breakfast or your favorite baking recipe.
-          </p>
-
-          <div className=" pb-8 justify-center grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {mappedEggs.length ? (
-              mappedEggs.map((g, index) => (
-                <div
-                  onClick={() => router.push(`/eggs/${g.slug.current}`)}
-                  key={index}
-                  className=" inline-grid justify-center rounded-lg shadow-lg bg-white p-8 hover:cursor-pointer "
-                >
-                  <h3 className=" inline-grid font-bold text-xl text-slate-800 ">
-                    {g.name}
-                  </h3>
-                  <img src={g.image} alt={g.name} />
-                  <p className="text-lg text-gray-500">Read More</p>
-                </div>
-              ))
-            ) : (
-              <>Sold Out!</>
-            )}
+            <div className=" pb-8 justify-center grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+              {mappedEggs.length ? (
+                mappedEggs.map((g, index) => (
+                  <div
+                    onClick={() => router.push(`/eggs/${g.slug.current}`)}
+                    key={index}
+                    className=" inline-grid justify-center rounded-lg shadow-lg bg-gray-50 p-8 hover:cursor-pointer "
+                  >
+                    <h3 className=" inline-grid font-bold text-xl text-slate-800 ">
+                      {g.name}
+                    </h3>
+                    <img src={g.image} alt={g.name} />
+                    <p className="text-lg text-gray-500">Read More</p>
+                  </div>
+                ))
+              ) : (
+                <>Sold Out!</>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-
       </div>
     </>
   );

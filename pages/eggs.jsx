@@ -34,6 +34,7 @@ export default function Eggs({ egg }) {
         <meta name="description" content="Eggs | Hufford Homestead" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
 
       <div className="flex flex-col md:flex-row col-auto justify-between ">
         <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center justify-center ">
@@ -41,7 +42,7 @@ export default function Eggs({ egg }) {
             {" "}
             Eggs
           </h2>
-          <p className="text-xl text-gray-500 container pb-8 font-barlow line-clamp-6 leading-tight">
+          <p className="text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
             {" "}
             Taste the difference of farm-fresh eggs! Our happy, healthy hens lay
             eggs with bright yolks and firm whites, perfect for your morning
@@ -68,6 +69,8 @@ export default function Eggs({ egg }) {
             )}
           </div>
         </div>
+      </div>
+
       </div>
     </>
   );

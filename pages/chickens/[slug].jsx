@@ -25,6 +25,8 @@ export const Chickens = ({ chicken }) => {
   }, [image]);
 
   return (
+    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
+
     <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center">
     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-center lg:space-x-12">
       <div className="flex flex-col justify-center container mx-auto lg:w-1/2">
@@ -59,6 +61,7 @@ export const Chickens = ({ chicken }) => {
 
         </div>
       </div>
+    </div>
     </div>
   );
 };

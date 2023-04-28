@@ -92,3 +92,11 @@ p {
 .bg-buff {
   @apply bg-[#d4a373ff];
 }
+
+.bg-eggshell {
+  @apply bg-[#f6f4e6ff];
+}
+
+.bg-sage-100 {
+  @apply bg-[#A5A58D];
+}

@@ -43,7 +43,7 @@ export default function Goats({ goats }) {
             Goats
           </h2>
 
-          <p className="text-xl text-gray-500 container pb-8 font-barlow line-clamp-6 leading-tight">
+          <p className="text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
             Our goats are raised on open pastures, with plenty of room to graze
             and play. We have a variety of breeds, including Nigerian Dwarf,
             Nubian, and Boer goats, all perfect for dairy or meat production.

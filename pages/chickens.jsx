@@ -34,13 +34,14 @@ export default function Chickens({ chickens }) {
         <meta name="description" content="Chickens | Hufford Homestead" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
 
       <div className="flex flex-col md:flex-row col-auto justify-between ">
         <div className="min-h-screen bottom-6 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-24 text-center justify-center ">
           <h2 className="font-fraunces text-3xl tracking-tight text-slate-800 sm:text-4xl mb-4">
             Chickens{" "}
           </h2>
-          <p className="text-xl text-gray-500 container pb-8 font-barlow line-clamp-6 leading-tight">
+          <p className="text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
             We take pride in raising a variety of chickens, from heritage breeds
             to the classic egg layers. Our chickens are free-range, enjoying a
             natural diet and access to plenty of space to roam. They provide us
@@ -67,6 +68,7 @@ export default function Chickens({ chickens }) {
             )}
           </div>
         </div>
+      </div>
       </div>
     </>
   );

@@ -16,7 +16,7 @@ export default function Document() {
         />
         <meta property="og:title" content="Hufford Homestead" key="title" />
         <meta property="og:description" content="Homestead selling goats, chickens, and eggs in Idaho" />
-        <meta property="og:image" content="/public/eggs.jpg" />
+        <meta property="og:image" content="public/eggs.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />

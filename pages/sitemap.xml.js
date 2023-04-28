@@ -1,5 +1,5 @@
 
-import createClient from "/Users/matthewrhoads/Developer/hufford-homestead/sanityClient.js";
+import createClient from "sanityClient.js";
 
 const createSitemap = (data, baseUrl) => `
   <?xml version="1.0" encoding="UTF-8"?>

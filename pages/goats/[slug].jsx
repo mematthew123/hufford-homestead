@@ -7,9 +7,11 @@ import { useState, useEffect } from "react";
 const serializers = {
   types: {
     block: (props) => {
-      if (props.node.style === 'normal') {
+      if (props.node.style === "normal") {
         return (
-          <p className="mb-4"> {/* Add desired CSS classes or style */}
+          <p className="mb-4">
+            {" "}
+            {/* Add desired CSS classes or style */}
             {props.children}
           </p>
         );
@@ -54,7 +56,9 @@ export const Goat = ({ goat }) => {
                 alt={name}
               />
             )}
-            <BlockContent blocks={body} serializers={serializers} />
+            <div className="text-left">
+              <BlockContent blocks={body} serializers={serializers} />
+            </div>
             <p className=" py-4 text-lg text-gray-500">${price}</p>
           </div>
           <div className=" flex flex-col container mx-auto lg:w-1/2">

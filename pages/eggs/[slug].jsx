@@ -54,7 +54,9 @@ export const Eggs = ({ egg }) => {
                 alt={name}
               />
             )}
-            <BlockContent blocks={body} serializers={serializers} />
+            <div className="text-left">
+              <BlockContent blocks={body} serializers={serializers} />
+            </div>
             <p className=" py-4 text-lg text-gray-500">${price}</p>
           </div>
           <div className=" flex flex-col container mx-auto lg:w-1/2">

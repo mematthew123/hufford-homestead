@@ -33,7 +33,7 @@ const Home = () => {
             <h2 className="text-5xl text-gray-800 font-bold font-fraunces text-fraunces-40 leading-fraunces-48 ">
               Welcome to Hufford Homestead
             </h2>
-            <p className=" text-gray-800 text-2xl mt-4 font-barlow text-barlow-16 leading-barlow-24">
+            <p className=" text-gray-800 text-lg lg:text-2xl mt-4 font-barlow text-barlow-16 leading-barlow-24">
               The home of sustainable and organic farming
             </p>
           </div>

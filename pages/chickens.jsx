@@ -40,7 +40,7 @@ export default function Chickens({ chickens }) {
             <h2 className="font-fraunces text-3xl tracking-tight text-slate-800 sm:text-4xl mb-4">
               Chickens{" "}
             </h2>
-            <p className="text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
+            <p className=" text-left text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
               We take pride in raising a variety of chickens, from heritage
               breeds to the classic egg layers. Our chickens are free-range,
               enjoying a natural diet and access to plenty of space to roam.

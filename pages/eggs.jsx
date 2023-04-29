@@ -41,7 +41,7 @@ export default function Eggs({ egg }) {
               {" "}
               Eggs
             </h2>
-            <p className="text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
+            <p className=" text-left text-xl text-gray-500 container pb-8 font-barlow leading-tight px-2 sm:px-6 lg:px-2">
               {" "}
               Taste the difference of farm-fresh eggs! Our happy, healthy hens
               lay eggs with bright yolks and firm whites, perfect for your

@@ -4,6 +4,21 @@ import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 
+const serializers = {
+  types: {
+    block: (props) => {
+      if (props.node.style === 'normal') {
+        return (
+          <p className="mb-4"> {/* Add desired CSS classes or style */}
+            {props.children}
+          </p>
+        );
+      }
+      return BaseBlockContent.defaultSerializers.types.block(props);
+    },
+  },
+};
+
 export const Goat = ({ goat }) => {
   const { name, body, image, price, breed, born } = goat;
 
@@ -39,7 +54,7 @@ export const Goat = ({ goat }) => {
                 alt={name}
               />
             )}
-            <BlockContent blocks={body} />
+            <BlockContent blocks={body} serializers={serializers} />
             <p className=" py-4 text-lg text-gray-500">${price}</p>
           </div>
           <div className=" flex flex-col container mx-auto lg:w-1/2">

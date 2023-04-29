@@ -3,6 +3,23 @@ import imageUrlBuilder from "@sanity/image-url";
 import { useState, useEffect } from "react";
 import ContactModal from "@/components/ContactModal";
 
+const serializers = {
+  types: {
+    block: (props) => {
+      if (props.node.style === "normal") {
+        return (
+          <p className="mb-4">
+            {" "}
+            {/* Add desired CSS classes or style */}
+            {props.children}
+          </p>
+        );
+      }
+      return BaseBlockContent.defaultSerializers.types.block(props);
+    },
+  },
+};
+
 export const Chickens = ({ chicken }) => {
   const { name, body, image, price, breed } = chicken;
 
@@ -37,7 +54,9 @@ export const Chickens = ({ chicken }) => {
                 alt={name}
               />
             )}
-            <BlockContent blocks={body} />
+            <div className="text-left">
+              <BlockContent blocks={body} serializers={serializers} />
+            </div>
             <p className=" py-4 text-lg text-gray-500">${price}</p>
           </div>
           <div className=" flex flex-col container mx-auto lg:w-1/2">
@@ -45,8 +64,8 @@ export const Chickens = ({ chicken }) => {
               Why Choose Our Chickens?
             </h2>
             <p className=" hidden lg:block text-gray-500">
-              Our Chickens are raised with love, care, and attention. We prioritize
-              their well-being and ensure they have the best possible
+              Our Chickens are raised with love, care, and attention. We
+              prioritize their well-being and ensure they have the best possible
               environment to grow and thrive.
             </p>
             <button

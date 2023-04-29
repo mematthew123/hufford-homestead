@@ -28,9 +28,9 @@ const Home = () => {
         <meta property="og:image" content="/logo.png" /> */}
       </Head>
       <div className="min-h-screen ">
-        <section className="bg-cover bg-center py-20">
-          <div className="text-center text-gray-800 ">
-            <h2 className="text-5xl text-gray-800 font-bold font-fraunces text-fraunces-40 leading-fraunces-48 ">
+        <section className="bg-cover bg-center h-1/2 sm:h-auto py-20">
+          <div className="text-center text-gray-800">
+            <h2 className="text-5xl text-gray-800 font-bold font-fraunces text-fraunces-40 leading-fraunces-48">
               Welcome to Hufford Homestead
             </h2>
             <p className=" text-gray-800 text-lg lg:text-2xl mt-4 font-barlow text-barlow-16 leading-barlow-24">
@@ -43,16 +43,14 @@ const Home = () => {
             Our Homestead
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
-          <div className="bg-gray-50 rounded-lg p-6">
+            <div className="bg-gray-50 rounded-lg p-6">
               <Link href="/goats">
                 <Image
                   src={GoatImage}
                   alt="Goats"
                   className="w-full h-56 object-cover rounded-lg mb-4"
                 />
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  Goats
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Goats</h3>
                 <p>Healthy and well-taken-care-of goats.</p>
               </Link>
             </div>
@@ -76,9 +74,7 @@ const Home = () => {
                   alt="Eggs"
                   className="w-full h-56 object-cover rounded-lg mb-4"
                 />
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  Eggs
-                </h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Eggs</h3>
                 <p>Free-range chicken eggs.</p>
               </Link>
             </div>

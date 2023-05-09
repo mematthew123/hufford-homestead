@@ -11,7 +11,7 @@ export default {
 
     {
       name: "slug",
-      title: "Slug",
+      title: "Slug (just click generate)",
       type: "slug",
       options: {
         source: "name",
@@ -20,16 +20,15 @@ export default {
     },
     {
       name: "breed",
-      title: "Breed",
+      title: "Breed (optional)",
       type: "string",
     },
 
     {
       name: "born",
-      title: "DOB",
+      title: "DOB (optional)",
       type: "date",
     },
-
     {
       name: 'body',
       title: 'Body',
@@ -37,7 +36,7 @@ export default {
     },
     {
       name: "price",
-      title: "Price",
+      title: "Price (enter as a number)",
       type: "number",
     },
     {

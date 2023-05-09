@@ -10,7 +10,7 @@ export default {
     },
     {
       name: "slug",
-      title: "Slug",
+      title: "Slug (just click generate)",
       type: "slug",
       options: {
         source: "name",
@@ -19,7 +19,7 @@ export default {
     },
     {
       name: 'quantity',
-      title: 'Quantity',
+      title: 'Quantity (optional)',
       type: 'number',
     },
     {
@@ -37,7 +37,7 @@ export default {
     },
     {
       name: 'price',
-      title: 'Price',
+      title: 'Price (enter as a number)',
       type: 'number',
     },
   ],

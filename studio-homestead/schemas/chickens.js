@@ -10,7 +10,7 @@ export default {
     },
     {
       name: "slug",
-      title: "Slug",
+      title: "Slug (just click generate)",
       type: "slug",
       options: {
         source: "name",
@@ -19,12 +19,12 @@ export default {
     },
     {
       name: 'age',
-      title: 'Age',
+      title: 'Age (optional)',
       type: 'number',
     },
     {
       name: 'breed',
-      title: 'Breed',
+      title: 'Breed (optional)',
       type: 'string',
     },
     {
@@ -42,7 +42,7 @@ export default {
     },
     {
       name: 'price',
-      title: 'Price',
+      title: 'Price (enter as a number)',
       type: 'number',
     },
   ],

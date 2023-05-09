@@ -28,7 +28,7 @@ const Home = () => {
         <meta property="og:image" content="/logo.png" /> */}
       </Head>
       <div className="min-h-screen ">
-        <section className="bg-cover bg-center h-1/2 sm:h-auto py-20">
+        <section className="bg-cover bg-center h-screen sm:h-auto py-20 flex items-center justify-center">
           <div className="text-center text-gray-800">
             <h2 className="text-5xl text-gray-800 font-bold font-fraunces text-fraunces-40 leading-fraunces-48">
               Welcome to Hufford Homestead
@@ -38,7 +38,8 @@ const Home = () => {
             </p>
           </div>
         </section>
-        <section className="py-16 ">
+
+        <section className="lg:py-16 sm:py-4 mb-32 lg:mb-0 ">
           <h2 className="text-center text-4xl font-bold text-gray-800 mb-10 font-fraunces text-fraunces-40 leading-fraunces-48">
             Our Homestead
           </h2>

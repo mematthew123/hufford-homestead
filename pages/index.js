@@ -5,30 +5,30 @@ import GoatImage from "../public/whiteGoate.jpg";
 import EggImage from "../public/eggs.jpg";
 import Link from "next/link";
 import { useState } from "react";
-
 import Image from "next/image";
 import { Locate } from "@/components/Locate";
 import ContactModal from "@/components/ContactModal";
+
+
 const Home = () => {
   const [modalOpen, setModalOpen] = useState(false);
+
 
   const toggleModal = () => {
     setModalOpen(!modalOpen);
   };
+
+
   return (
     <>
       <Head>
         <title>Hufford Homestead</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="Hufford Homestead" />
-        {/* <meta property="og:title" content="Hufford Homestead" />
-        <meta property="og:description" content="Hufford Homestead" />
-        <meta property="og:url" content="https://huffordhomestead.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/logo.png" /> */}
+        <meta name="description" content="Hufford Homestead is a small farm in Glens Ferry, Idaho. We raise goats and chickens and sell eggs." />
+        <meta name='keywords' content='Hufford Homestead, Homestead, Farm, Goats, Chickens, Eggs, Organic, Sustainable, Glens Ferry, Twin Falls, Idaho' />
+        <meta name='author' content='Hufford Homestead' />
       </Head>
-      <div className="min-h-screen ">
-        <section className="bg-cover bg-center h-screen sm:h-auto py-20 flex items-center justify-center">
+        <section className="bg-cover bg-center h-screen  py-20 flex items-center justify-center">
           <div className="text-center text-gray-800">
             <h2 className="text-5xl text-gray-800 font-bold font-fraunces text-fraunces-40 leading-fraunces-48">
               Welcome to Hufford Homestead
@@ -43,7 +43,7 @@ const Home = () => {
           <h2 className="text-center text-4xl font-bold text-gray-800 mb-10 font-fraunces text-fraunces-40 leading-fraunces-48">
             Our Homestead
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 text-center mx-auto max-w-7xl px-2 py-10 sm:px-6 lg:px-2">
             <div className="bg-gray-50 rounded-lg p-6">
               <Link href="/goats">
                 <Image
@@ -83,7 +83,7 @@ const Home = () => {
         </section>
         <section className="bg-tea-green py-8">
           <div className="container mx-auto text-center">
-            <h2 className=" pt-8 text-2xl font-bold text-gray-800 mb-4 font-fraunces text-fraunces-40 leading-fraunces-48">
+            <h2 className=" pt-8 text-2xl font-bold text-gray-50 mb-4 font-fraunces text-fraunces-40 leading-fraunces-48">
               We'd love to hear from you!
             </h2>
             <p className="text-xl text-gray-800 mb-1">
@@ -98,7 +98,6 @@ const Home = () => {
             <Locate />
           </div>
         </section>
-      </div>
     </>
   );
 };

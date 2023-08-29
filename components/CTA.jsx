@@ -12,7 +12,7 @@ const CTA = () => {
         </div>
         <div className="w-2/3 pl-4">
           <h3 className="text-xl font-bold">About Our Goats</h3>
-          <p className="text-gray-500">
+          <p className="text-gray-50">
             Here at our homestead, we take great pride in raising healthy, happy goats. Our goats are well-taken-care-of and provide us with high-quality milk and meat. They are free-range and have plenty of space to roam and graze on our lush pastures. We are committed to sustainable and ethical farming practices, ensuring the well-being of our animals and the quality of our products.
           </p>
         </div>

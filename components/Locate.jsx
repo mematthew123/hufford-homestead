@@ -6,7 +6,7 @@ export function Locate() {
       <Container>
         <div className="md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-50 sm:text-4xl"></h2>
-          <p className=" text-lg text-slate-400">
+          <p className=" text-lg text-gray-50">
             608 Moore Ave, Glens Ferry ID
           </p>
         </div>
